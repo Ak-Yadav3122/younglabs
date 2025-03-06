@@ -1,42 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body, html, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
 #root {
-  max-width: 1280px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.card-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
-  padding: 2rem;
+}
+
+.app-title {
+  color: rgb(47, 130, 193);
   text-align: center;
+  margin-bottom: 15px;
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app-description {
+  text-align: center;
+  color: #3b3434;
+  margin-bottom: 25px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  color: #502c98;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-input {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.submit-button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5b77cb;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.submit-button:hover {
+  background-color: #234bc2;
+}
+
+.message-container {
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+}
+
+.error-message {
+  background-color: #ffebee;
+}
+
+.status-icon {
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.success-icon {
+  background-color: #4caf50;
+}
+
+.error-icon {
+  background-color: #f44336;
+}
+
+.message-content {
+  flex: 1;
+}
+
+.message-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .app-title {
+    font-size: 1.5rem;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  .app-description {
+    font-size: 0.9rem;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
