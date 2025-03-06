@@ -2,11 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-app.use(cors({
-    origin:"https://younglabs-c.vercel.app",
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
-  }));
+app.use(cors());
 
 app.get("/api/greet", (req, res) => {
     const { name } = req.query;
