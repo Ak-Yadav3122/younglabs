@@ -24,6 +24,15 @@ function App() {
             className="form-input"
           />
         </div>
+
+        <button
+
+          className="submit-button"
+        >
+          Get Greeting
+        </button>
+
+       
       </div>
     </div>
   );
